@@ -2,7 +2,7 @@
   "name": "iparkit",
   "version": "0.0.1",
   "author": "Ionic Framework",
-  "homepage": "http://iParkIT.github.io/iParkIT",
+  "homepage": "http://iparkit.github.io/iParkIT",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -11,7 +11,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "master -d build"
   },
   "private": true,
   "dependencies": {
@@ -54,7 +54,7 @@
     "gh-pages": "^3.1.0",
     "jasmine-core": "~3.6.0",
     "jasmine-spec-reporter": "~5.0.0",
-    "karma": "~5.2.0",
+    "karma": "^6.3.2",
     "karma-chrome-launcher": "~3.1.0",
     "karma-coverage": "~2.0.3",
     "karma-coverage-istanbul-reporter": "~3.0.2",
