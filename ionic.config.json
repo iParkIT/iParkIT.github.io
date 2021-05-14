@@ -1,0 +1,7 @@
+{
+  "name": "iparkit",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

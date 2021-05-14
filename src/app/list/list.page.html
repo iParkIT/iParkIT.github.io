@@ -1,0 +1,71 @@
+<ion-header>
+  <div id="header">
+    <br/><br/>
+    <ion-title id="title">
+      List
+    </ion-title><br/>
+  </div>
+</ion-header>
+
+<ion-content>
+  <ion-list [hidden]="!isMarkerClicked" id="list">
+    <ion-item *ngFor="let marker of markers">
+      <button item-right (click)="nextPage(marker)" id="invisButton">
+        <ion-grid id="searchGrid">
+          <ion-row>
+            <ion-col size="auto">
+              <ion-row>
+                {{ marker.title }}
+              </ion-row>
+              <ion-row>
+                Grade: {{ marker.grade }}
+              </ion-row>
+              <ion-row>
+                Time: {{ marker.time }}
+              </ion-row>
+            </ion-col>
+            <ion-col size="2">
+              <ion-row>
+                <img id="iconScreen" src='{{ marker.iconScreen }}'>
+              </ion-row>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </button>
+    </ion-item>
+  </ion-list>
+  <div [hidden]="isMarkerClicked" id="header">
+    <ion-grid id="secondGrid">
+      <ion-row>
+        <ion-button (click)="changeMap()">Back</ion-button>
+      </ion-row>
+      <ion-row>
+        <ion-col size="5">
+          <img src='{{ markerDetails.mapScreen }}' id="imageCenter">
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="5" id="alignCenter">
+          <h1 id="title2">{{ markerDetails.title }}</h1>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="5">
+          <p>{{ markerDetails.description }}</p> 
+          <p>{{ markerDetails.parkingGrade }}</p>
+        </ion-col>
+      </ion-row>
+      <ion-row id="colColor">
+        <ion-col size="2" id="alignCenter">
+          <p id="title2">{{ markerDetails.peakTimes }}</p>
+        </ion-col>
+        <ion-col size="2">
+          <img id="iconSecond" src='{{ markerDetails.iconSecondScreen }}'>
+        </ion-col>
+        <ion-col size="1">
+          <img id="key" src='{{ markerDetails.key }}'>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>
